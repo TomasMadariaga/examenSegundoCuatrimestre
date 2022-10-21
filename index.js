@@ -50,11 +50,56 @@ bulma.makeSound(); // -> meow meow
 bulma.washUp();
 var vegeta = new Dog('Vegeta');
 vegeta.makeSound(); // -> wuff wuff
-/* Que es un objeto?
- Que es una clase?A que se llama metodo constructor?
+/*
+Que es un objeto?
+UN OBJETO ES ALGO REAL CON CARACTERISTICAS PROPIAS
+ 
+Que es una clase? A que se llama metodo constructor?
+UNA CLASE ES UN OBJETO A CREAR USANDO CUALIDADES Y METODOS PROPIAS DE DICHA CLASE. CONSTRUCTOR SERIA UNA PLANTILLA PARA CREAR LA CLASE
+
 Que son los modificadores de acceso?
+LOS MODIFICADORES DE ACCESO SON PALABRAS QUE DEFINEN SI SE PUEDE USAR O NO LAS VARIABLES DE LA CLASE
+
 Que diferencia hay entre uno privado y uno protegido?
+EN PRIVADO NO SE PUEDE ACCEDER SI NO ES DE SU MISMA CLASE Y EN PROTEGIDO LAS VARIABLES SE PUEDEN USAR EN SUBCLASES SOLAMENTE
+
 Cuando se usa el this?
+EL THIS SE PUEDE USAR PARA LLAMAR A LA VARIABLE INTERNA. POR EJ: THIS.NAME = THIS.VARIABLEDELCONSTRUCTOR
+
 Cuando se usa el super?
+EL SUPER SE USA CUANDO HEREDAS UNA CLASE Y TRAES SU CONSTRUCTOR
+
 A que se llama sub-clase, o clase hija?
-*/ 
+SUB CLASE O CLASE HIJA SE LE LLAMA A UNA CLASE QUE HEREDA VARIABLES Y/O METODOS DE OTRA CLASE
+
+*/
+var Celular = /** @class */ (function () {
+    function Celular(marca, modelo, fechaFab) {
+        this.marca = marca;
+        this.modelo = modelo;
+        this.fechaDeFabricacion = fechaFab;
+    }
+    Celular.prototype.encender = function () {
+        console.log('Encendiendo...');
+    };
+    Celular.prototype.apagar = function () {
+        console.log('Apagando...');
+    };
+    return Celular;
+}());
+var Smarthphone = /** @class */ (function (_super) {
+    __extends(Smarthphone, _super);
+    function Smarthphone(marca, modelo, fechaDeFabricacion, procesador) {
+        return _super.call(this, marca, modelo, fechaDeFabricacion) || this;
+    }
+    Smarthphone.prototype.usarGoogle = function () {
+        console.log('Abrir nueva pestana');
+    };
+    Smarthphone.prototype.tomarFoto = function () {
+        console.log('Foto guardada en la galeria');
+    };
+    return Smarthphone;
+}(Celular));
+var SamsungA22 = new Smarthphone('Samsung', 'A22', 2020, 'Snapdragon');
+SamsungA22.usarGoogle();
+SamsungA22.tomarFoto();
