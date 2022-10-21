@@ -39,5 +39,6 @@ class Dog extends Animal {
    
    let bulma: Cat = new Cat('Bulma');
    bulma.makeSound(); // -> meow meow
+   bulma.washUp();
    let vegeta: Dog = new Dog('Vegeta');
    vegeta.makeSound(); // -> wuff wuff

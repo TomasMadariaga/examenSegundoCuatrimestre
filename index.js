@@ -13,26 +13,40 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-var Dog = /** @class */ (function () {
-    function Dog(name) {
+var Animal = /** @class */ (function () {
+    function Animal(name) {
         this.name = name;
     }
+    Animal.prototype.run = function () {
+        console.log('Comienza a correr...');
+    };
+    return Animal;
+}());
+var Dog = /** @class */ (function (_super) {
+    __extends(Dog, _super);
+    function Dog(name) {
+        return _super.call(this, name) || this;
+    }
     Dog.prototype.makeSound = function () {
-        console.log('wuff wuff\n');
+        console.log('wuff wuff');
     };
     return Dog;
-}());
+}(Animal));
 var Cat = /** @class */ (function (_super) {
     __extends(Cat, _super);
     function Cat(name) {
         return _super.call(this, name) || this;
     }
     Cat.prototype.makeSound = function () {
-        console.log("meow meow");
+        console.log('meow meow');
+    };
+    Cat.prototype.washUp = function () {
+        console.log('El gato se limpia con la lengua');
     };
     return Cat;
 }(Dog));
-var minino = new Cat('Pocky');
-minino.makeSound(); // -> meow meow
-var firulais = new Dog('Pocky');
-firulais.makeSound(); // -> wuff wuff
+var bulma = new Cat('Bulma');
+bulma.makeSound(); // -> meow meow
+bulma.washUp();
+var vegeta = new Dog('Vegeta');
+vegeta.makeSound(); // -> wuff wuff
