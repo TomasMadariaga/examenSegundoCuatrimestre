@@ -1,0 +1,19 @@
+{
+  "name": "examensegundocuatrimestre",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TomasMadariaga/examenSegundoCuatrimestre.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TomasMadariaga/examenSegundoCuatrimestre/issues"
+  },
+  "homepage": "https://github.com/TomasMadariaga/examenSegundoCuatrimestre#readme"
+}
