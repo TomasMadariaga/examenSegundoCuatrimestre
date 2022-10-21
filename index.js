@@ -50,3 +50,11 @@ bulma.makeSound(); // -> meow meow
 bulma.washUp();
 var vegeta = new Dog('Vegeta');
 vegeta.makeSound(); // -> wuff wuff
+/* Que es un objeto?
+ Que es una clase?A que se llama metodo constructor?
+Que son los modificadores de acceso?
+Que diferencia hay entre uno privado y uno protegido?
+Cuando se usa el this?
+Cuando se usa el super?
+A que se llama sub-clase, o clase hija?
+*/ 
